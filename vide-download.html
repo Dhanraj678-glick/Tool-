@@ -1,0 +1,357 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Video Downloader &amp; All-in-One Tools | Fast &amp; User Friendly
+  </title>
+  <meta content="Download videos easily and quickly with our user-friendly video downloader. Plus, access a suite of free online tools including image converter, PDF compressor, and more. SEO optimized and fully responsive." name="description"/>
+  <meta content="video downloader, online tools, free tools, image converter, PDF compressor, video converter, SEO friendly website, responsive design" name="keywords"/>
+  <meta content="index, follow" name="robots"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <a aria-label="Homepage" class="flex items-center space-x-2" href="#">
+     <img alt="Logo with letters V and D in white on blue background, representing Video Downloader app" class="w-10 h-10 rounded-md" height="40" src="https://storage.googleapis.com/a1aa/image/eca5d5f8-a154-4712-c590-f22f5ce1093c.jpg" width="40"/>
+     <h1 class="text-2xl font-semibold text-blue-600">
+      Video Downloader &amp; Tools
+     </h1>
+    </a>
+    <nav aria-label="Primary Navigation" class="hidden md:flex space-x-8 text-gray-700 font-medium" role="navigation">
+     <a class="hover:text-blue-600 transition" href="#video-downloader">
+      Video Downloader
+     </a>
+     <a class="hover:text-blue-600 transition" href="#tools-section">
+      Tools
+     </a>
+     <a class="hover:text-blue-600 transition" href="#about-section">
+      About
+     </a>
+     <a class="hover:text-blue-600 transition" href="#contact-section">
+      Contact
+     </a>
+    </nav>
+    <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-600" id="menu-btn">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <nav aria-label="Mobile Navigation" class="md:hidden bg-white border-t border-gray-200 hidden flex-col space-y-2 px-4 py-3" id="mobile-menu" role="navigation">
+    <a class="block text-gray-700 font-medium hover:text-blue-600 transition" href="#video-downloader">
+     Video Downloader
+    </a>
+    <a class="block text-gray-700 font-medium hover:text-blue-600 transition" href="#tools-section">
+     Tools
+    </a>
+    <a class="block text-gray-700 font-medium hover:text-blue-600 transition" href="#about-section">
+     About
+    </a>
+    <a class="block text-gray-700 font-medium hover:text-blue-600 transition" href="#contact-section">
+     Contact
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow container mx-auto px-4 py-12">
+   <section aria-labelledby="video-downloader-title" class="max-w-4xl mx-auto mb-20" id="video-downloader">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-6 text-center" id="video-downloader-title">
+     Download Videos Easily and Quickly
+    </h2>
+    <p class="text-gray-600 mb-10 max-w-3xl mx-auto text-center leading-relaxed">
+     Paste the video URL below and click "Download" to save your favorite videos instantly. Our downloader supports multiple popular video platforms and provides fast, secure downloads.
+    </p>
+    <form autocomplete="off" class="w-full bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4" id="download-form" novalidate="">
+     <label class="sr-only" for="video-url">
+      Video URL
+     </label>
+     <input aria-describedby="url-error" class="flex-grow border border-gray-300 rounded-md px-4 py-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" id="video-url" name="video-url" placeholder="Enter video URL (e.g. https://www.example.com/video)" required="" type="url"/>
+     <button aria-label="Download video" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md px-6 py-3 flex items-center justify-center transition focus:outline-none focus:ring-2 focus:ring-blue-500" type="submit">
+      <i class="fas fa-download mr-2">
+      </i>
+      Download
+     </button>
+    </form>
+    <p class="text-red-600 mt-2 hidden" id="url-error" role="alert">
+    </p>
+    <section aria-live="polite" class="mt-12 w-full bg-white rounded-lg shadow-md p-6 hidden flex-col items-center" id="download-result">
+     <img alt="Video thumbnail placeholder showing a generic video frame with play button icon" class="w-full rounded-md mb-4 object-cover max-h-48" height="180" id="video-thumbnail" src="https://storage.googleapis.com/a1aa/image/7103e410-5850-4a86-f2c4-f3d900859d3f.jpg" width="320"/>
+     <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center" id="video-title">
+      Video Title Placeholder
+     </h3>
+     <a class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold rounded-md px-5 py-3 transition focus:outline-none focus:ring-2 focus:ring-green-500" download="" href="#" id="download-link">
+      <i class="fas fa-file-download mr-2">
+      </i>
+      Click here to download
+     </a>
+    </section>
+   </section>
+   <section aria-labelledby="tools-title" class="max-w-6xl mx-auto" id="tools-section">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-10 text-center" id="tools-title">
+     All-in-One Free Online Tools
+    </h2>
+    <p class="text-gray-600 mb-12 max-w-4xl mx-auto text-center leading-relaxed">
+     Explore our suite of free, easy-to-use online tools designed to help you with everyday tasks. All tools are fast, secure, and require no installation.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img alt="Icon representing video conversion with film strip and arrows" class="w-20 h-20 mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/181935ec-f748-43f1-ad6e-f764662737dc.jpg" width="80"/>
+      <h3 class="text-xl font-semibold mb-2">
+       Video Converter
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Convert videos to popular formats like MP4, AVI, MOV quickly and easily.
+      </p>
+      <a aria-label="Go to Video Converter tool" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center" href="#video-converter">
+       Try Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img alt="Icon representing image conversion with photo and arrows" class="w-20 h-20 mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/e1e2b19f-3af6-47d0-c112-a391ab152537.jpg" width="80"/>
+      <h3 class="text-xl font-semibold mb-2">
+       Image Converter
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Convert images between JPG, PNG, GIF, and more with ease.
+      </p>
+      <a aria-label="Go to Image Converter tool" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center" href="#image-converter">
+       Try Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img alt="Icon representing PDF compression with document and down arrow" class="w-20 h-20 mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/d0e1e398-3eac-4f86-42c2-6a63a98a6c48.jpg" width="80"/>
+      <h3 class="text-xl font-semibold mb-2">
+       PDF Compressor
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Reduce PDF file size without losing quality for easy sharing.
+      </p>
+      <a aria-label="Go to PDF Compressor tool" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center" href="#pdf-compressor">
+       Try Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img alt="Icon representing audio extraction with music note and scissors" class="w-20 h-20 mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/b28e1064-c8cc-4898-2977-bde7a49b045d.jpg" width="80"/>
+      <h3 class="text-xl font-semibold mb-2">
+       Audio Extractor
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Extract audio tracks from videos in MP3 or WAV formats.
+      </p>
+      <a aria-label="Go to Audio Extractor tool" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center" href="#audio-extractor">
+       Try Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img alt="Icon representing video trimming with scissors cutting film strip" class="w-20 h-20 mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/3264fba0-abc2-4ce6-279c-3252c3ffb323.jpg" width="80"/>
+      <h3 class="text-xl font-semibold mb-2">
+       Video Trimmer
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Cut and trim videos to your desired length quickly and easily.
+      </p>
+      <a aria-label="Go to Video Trimmer tool" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center" href="#video-trimmer">
+       Try Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </article>
+     <article class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition">
+      <img alt="Icon representing file format conversion with arrows and file icons" class="w-20 h-20 mb-4" height="80" src="https://storage.googleapis.com/a1aa/image/d3e0ecf5-610c-40c5-50f5-bf4f974ebeef.jpg" width="80"/>
+      <h3 class="text-xl font-semibold mb-2">
+       File Converter
+      </h3>
+      <p class="text-gray-600 mb-4">
+       Convert documents, spreadsheets, and presentations to various formats.
+      </p>
+      <a aria-label="Go to File Converter tool" class="text-blue-600 hover:text-blue-800 font-semibold inline-flex items-center" href="#file-converter">
+       Try Now
+       <i class="fas fa-arrow-right ml-2">
+       </i>
+      </a>
+     </article>
+    </div>
+   </section>
+   <section aria-labelledby="about-title" class="max-w-4xl mx-auto mt-20 px-4" id="about-section">
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-6 text-center" id="about-title">
+     About Our Platform
+    </h2>
+    <p class="text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
+     We provide a comprehensive suite of free online tools designed to simplify your digital tasks. Whether you want to download videos, convert files, compress PDFs, or extract audio, our platform offers fast, secure, and easy-to-use solutions accessible from any device. No software installation required.
+    </p>
+   </section>
+   <section aria-labelledby="contact-title" class="max-w-4xl mx-auto mt-20 px-4" id="contact-section">
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-6 text-center" id="contact-title">
+     Contact Us
+    </h2>
+    <p class="text-gray-700 mb-8 text-center max-w-3xl mx-auto leading-relaxed">
+     Have questions or need support? Reach out to our friendly team and we'll be happy to help.
+    </p>
+    <form class="bg-white rounded-lg shadow-md p-6 max-w-xl mx-auto" id="contact-form" novalidate="">
+     <div class="mb-4">
+      <label class="block text-gray-700 font-semibold mb-2" for="name">
+       Name
+      </label>
+      <input aria-required="true" class="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" id="name" name="name" placeholder="Your full name" required="" type="text"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-700 font-semibold mb-2" for="email">
+       Email
+      </label>
+      <input aria-required="true" class="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-700 font-semibold mb-2" for="message">
+       Message
+      </label>
+      <textarea aria-required="true" class="w-full border border-gray-300 rounded-md px-4 py-3 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" id="message" name="message" placeholder="Write your message here..." required="" rows="4"></textarea>
+     </div>
+     <button aria-label="Send message" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md px-6 py-3 w-full transition focus:outline-none focus:ring-2 focus:ring-blue-500" type="submit">
+      Send Message
+     </button>
+     <p aria-live="polite" class="mt-4 text-green-600 hidden" id="contact-success">
+      Your message has been sent successfully!
+     </p>
+     <p aria-live="assertive" class="mt-4 text-red-600 hidden" id="contact-error">
+      Please fill in all fields correctly.
+     </p>
+    </form>
+   </section>
+  </main>
+  <footer class="bg-white border-t border-gray-200 py-6 mt-20">
+   <div class="container mx-auto px-4 text-center text-gray-500 text-sm">
+    © 2024 Video Downloader &amp; Tools. All rights reserved.
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Video downloader form logic
+    const form = document.getElementById('download-form');
+    const urlInput = document.getElementById('video-url');
+    const urlError = document.getElementById('url-error');
+    const downloadResult = document.getElementById('download-result');
+    const videoThumbnail = document.getElementById('video-thumbnail');
+    const videoTitle = document.getElementById('video-title');
+    const downloadLink = document.getElementById('download-link');
+
+    // Simulated video data for demo purposes
+    const sampleVideos = {
+      'https://www.example.com/video1': {
+        title: 'Amazing Nature Documentary',
+        thumbnail:
+          'https://placehold.co/320x180/png?text=Nature+Documentary+Thumbnail',
+        downloadUrl:
+          'https://placehold.co/640x360/mp4?text=Nature+Documentary+Video',
+      },
+      'https://www.example.com/video2': {
+        title: 'Tech Review 2024',
+        thumbnail: 'https://placehold.co/320x180/png?text=Tech+Review+Thumbnail',
+        downloadUrl: 'https://placehold.co/640x360/mp4?text=Tech+Review+Video',
+      },
+      'https://www.example.com/video3': {
+        title: 'Cooking Masterclass',
+        thumbnail: 'https://placehold.co/320x180/png?text=Cooking+Masterclass',
+        downloadUrl: 'https://placehold.co/640x360/mp4?text=Cooking+Masterclass',
+      },
+    };
+
+    function validateUrl(value) {
+      try {
+        const url = new URL(value);
+        return url.protocol === 'http:' || url.protocol === 'https:';
+      } catch {
+        return false;
+      }
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const urlValue = urlInput.value.trim();
+
+      if (!validateUrl(urlValue)) {
+        urlError.textContent = 'Please enter a valid URL starting with http or https.';
+        urlError.classList.remove('hidden');
+        downloadResult.classList.add('hidden');
+        return;
+      }
+
+      urlError.classList.add('hidden');
+
+      // Simulate fetching video info
+      if (sampleVideos[urlValue]) {
+        const video = sampleVideos[urlValue];
+        videoTitle.textContent = video.title;
+        videoThumbnail.src = video.thumbnail;
+        videoThumbnail.alt = `Thumbnail image for video titled ${video.title}`;
+        downloadLink.href = video.downloadUrl;
+        downloadLink.setAttribute('download', '');
+        downloadResult.classList.remove('hidden');
+      } else {
+        videoTitle.textContent = 'Video not found';
+        videoThumbnail.src = 'https://placehold.co/320x180/png?text=No+Video+Found';
+        videoThumbnail.alt = 'No video found placeholder image with text "No Video Found"';
+        downloadLink.href = '#';
+        downloadLink.removeAttribute('download');
+        downloadResult.classList.remove('hidden');
+      }
+    });
+
+    // Contact form logic
+    const contactForm = document.getElementById('contact-form');
+    const contactSuccess = document.getElementById('contact-success');
+    const contactError = document.getElementById('contact-error');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      contactSuccess.classList.add('hidden');
+      contactError.classList.add('hidden');
+
+      const name = contactForm.name.value.trim();
+      const email = contactForm.email.value.trim();
+      const message = contactForm.message.value.trim();
+
+      if (name === '' || email === '' || message === '') {
+        contactError.textContent = 'Please fill in all fields correctly.';
+        contactError.classList.remove('hidden');
+        return;
+      }
+
+      // Simple email format check
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        contactError.textContent = 'Please enter a valid email address.';
+        contactError.classList.remove('hidden');
+        return;
+      }
+
+      // Simulate successful submission
+      contactSuccess.textContent = 'Your message has been sent successfully!';
+      contactSuccess.classList.remove('hidden');
+      contactForm.reset();
+    });
+  </script>
+ </body>
+</html>
